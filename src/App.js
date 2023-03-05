@@ -7,13 +7,14 @@ import { useSelector, useDispatch } from "react-redux";
 import { setCategories } from './redux/actiton/category-action';
 import { Link } from 'react-router-dom';
 import CategoryDetails from './pages/index/category-details';
+import ProductDetails from './pruducts-details';
 
 
 function App() {
   const { categoryState } = useSelector((state) => state);
   const dispatch = useDispatch()
   const api = useApi();
-  
+
   if (categoryState.initialized === false) {
     const params = { page: 1, itemsPerPage: 30 };
 
@@ -31,6 +32,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route index element={<Index />} />
+          <Route path='product/:product_code' element={<ProductDetails />} />
           <Route path='category/:category_code' element={<CategoryDetails />} />
         </Routes>
       </BrowserRouter>

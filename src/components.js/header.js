@@ -2,7 +2,6 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 
-
 const Header = () => {
     const { categoryState } = useSelector(state => state)
     console.log(categoryState)
@@ -17,8 +16,8 @@ const Header = () => {
                         </div>
                         <div className="col-lg-4 col-md-5 col-sm-6 col-xs-12">
                             <ul>
-                                <li>+180-123-4567</li>
-                                <li>info@demo.com</li>
+                                <li>+90 553 679 89 52</li>
+                                <li>mozdemir3545@gmail.com</li>
                                 <li><a href="#">Help</a></li>
                             </ul>
                         </div>
